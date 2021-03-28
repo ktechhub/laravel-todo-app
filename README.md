@@ -40,4 +40,4 @@ DB_PASSWORD=
 
 `php artisan serve`
 
-The server is located at `http://127.0.0.1:8000`
+The server is located at [http://127.0.0.1:8000](http://127.0.0.1:8000)
