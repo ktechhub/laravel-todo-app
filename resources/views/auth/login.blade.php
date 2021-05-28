@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container mb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <h4 class="card-header">Login with the following credentials or signup!!!</h4>
+
+                <div class="card-body">
+                    <p>
+                        <b>Email:</b> <span>admin@ktechhub.com</span><hr>
+                        <b>Password:</b> <span>ktechhub</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
