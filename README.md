@@ -14,6 +14,11 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Check the live app
+
+[http://ktechhub-todo-app.herokuapp.com/](http://ktechhub-todo-app.herokuapp.com/)
+
+
 ## Install and run the project
 
 ### Clone the project
