@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <p>
-                        <b>Email:</b> <span>admin@ktechhub.com</span><hr>
+                        <b>Email:</b> <span>kalkulus@ktechhub.com</span><hr>
                         <b>Password:</b> <span>ktechhub</span>
                     </p>
                 </div>
