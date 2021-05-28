@@ -23,6 +23,9 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 `composer install`
 
+### Copy the .env file
+`cp .env.example .env`
+
 ### Create a database and update the database credentials
 ```
 DB_CONNECTION=mysql
