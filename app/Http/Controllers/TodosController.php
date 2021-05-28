@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -70,10 +71,7 @@ class TodosController extends Controller
      */
     public function show($id)
     {
-        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->first();
-        if(!$todo){
-            abort(404);
-        }
+        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->firstOrFail();
         return view('delete_todo', compact('todo'));
     }
 
@@ -85,10 +83,7 @@ class TodosController extends Controller
      */
     public function edit($id)
     {
-        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->first();
-        if(!$todo){
-            abort(404);
-        }
+        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->firstOrFail();
         return view('edit_todo', compact('todo'));
     }
 
@@ -107,7 +102,7 @@ class TodosController extends Controller
             'completed' => 'nullable',
         ]);
 
-        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->first();
+        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->firstOrFail();
         $todo->title = $request->input('title');
         $todo->description = $request->input('description');
 
@@ -130,7 +125,7 @@ class TodosController extends Controller
      */
     public function destroy($id)
     {
-        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->first();
+        $todo = Todo::where('id', $id)->where('user_id', Auth::user()->id)->firstOrFail();
         $todo->delete();
         return redirect()->route('todo.index')->with('success', 'Item deleted successfully');
     }
